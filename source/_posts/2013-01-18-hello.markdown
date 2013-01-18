@@ -1,0 +1,9 @@
+---
+layout: post
+title: "hello"
+date: 2013-01-18 16:11
+comments: true
+categories: 
+---
+
+Hello world from Magic.
