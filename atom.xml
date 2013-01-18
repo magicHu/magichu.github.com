@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Magic Blog]]></title>
+  <link href="http://magicHu.github.com/atom.xml" rel="self"/>
+  <link href="http://magicHu.github.com/"/>
+  <updated>2013-01-18T15:58:00+08:00</updated>
+  <id>http://magicHu.github.com/</id>
+  <author>
+    <name><![CDATA[Magic]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
