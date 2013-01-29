@@ -4,7 +4,7 @@
   <title><![CDATA[Magic Blog]]></title>
   <link href="http://magicHu.github.com/atom.xml" rel="self"/>
   <link href="http://magicHu.github.com/"/>
-  <updated>2013-01-18T17:50:53+08:00</updated>
+  <updated>2013-01-30T00:19:10+08:00</updated>
   <id>http://magicHu.github.com/</id>
   <author>
     <name><![CDATA[Magic]]></name>
@@ -14,11 +14,72 @@
 
   
   <entry>
-    <title type="html"><![CDATA[hello]]></title>
-    <link href="http://magicHu.github.com/blog/2013/01/18/hello/"/>
-    <updated>2013-01-18T16:11:00+08:00</updated>
-    <id>http://magicHu.github.com/blog/2013/01/18/hello</id>
-    <content type="html"><![CDATA[<p>Hello world from Magic.</p>
+    <title type="html"><![CDATA[Compass学习笔记]]></title>
+    <link href="http://magicHu.github.com/blog/2013/01/29/compassxue-xi-bi-ji/"/>
+    <updated>2013-01-29T23:49:00+08:00</updated>
+    <id>http://magicHu.github.com/blog/2013/01/29/compassxue-xi-bi-ji</id>
+    <content type="html"><![CDATA[<h3><a href="http://compass-style.org/reference/compass/css3/">Compass CSS3</a></h3>
+
+<h4><a href="http://compass-style.org/reference/compass/css3/border_radius/">Border Radius</a></h4>
+
+<h5>Configurable Variables</h5>
+
+<pre><code>* $default-border-radius 5px
+</code></pre>
+
+<h5>Mixins</h5>
+
+<pre><code>* border-radius($radius, $vertical-radius)
+* border-corner-radius($vert, $horz, $radius)
+* border-top-left-radius($radius)
+* border-top-right-radius($radius)
+* border-bottom-left-radius($radius)
+* and so on...
+</code></pre>
+
+<h4><a href="http://compass-style.org/reference/compass/css3/text-shadow/">Text Shadow</a></h4>
+
+<h5>Configurable Variables</h5>
+
+<pre><code>* $default-text-shadow-color #aaaaaa
+* $default-text-shadow-h-offset 0px
+* $default-text-shadow-v-offset 0px
+* $default-text-shadow-blur 1px
+* $default-text-shadow-spread false
+</code></pre>
+
+<h5>Mixins</h5>
+
+<pre><code>* text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+* single-text-shadow($hoff, $voff, $blur, $spread, $color)
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ubuntu开发环境]]></title>
+    <link href="http://magicHu.github.com/blog/2013/01/26/ubuntukai-fa-huan-jing/"/>
+    <updated>2013-01-26T23:59:00+08:00</updated>
+    <id>http://magicHu.github.com/blog/2013/01/26/ubuntukai-fa-huan-jing</id>
+    <content type="html"><![CDATA[<p>Tools
+* Chrome
+* Sublime Text 2
+* Apache &amp; PHP5 &amp; MySQL [http://wiki.ubuntu.org.cn/Apache]
+* PhpMyAdmin [www.phpmyadmin.net]
+* Passenger [https://www.phusionpassenger.com/]</p>
+
+<p>Ruby on Rails
+* rvm &amp; ruby &amp; gem &amp; bundler &amp; rails [http://ruby-china.org/wiki/install_ruby_guide]</p>
+
+<h4>Sublime Text and Plugins</h4>
+
+<ul>
+<li>Package Control</li>
+<li>Zen Coding</li>
+<li>Alignment</li>
+<li>Markdown Preview</li>
+</ul>
+
 ]]></content>
   </entry>
   
