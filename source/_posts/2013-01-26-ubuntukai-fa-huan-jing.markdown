@@ -6,16 +6,16 @@ comments: true
 categories: 
 ---
 
-Tools
+### Tools
 * Chrome
-* Sublime Text 2
-* Apache & PHP5 & MySQL [http://wiki.ubuntu.org.cn/Apache]
-* PhpMyAdmin [www.phpmyadmin.net]
-* Passenger [https://www.phusionpassenger.com/]
+* [Sublime Text 2](http://www.sublimetext.com/)
+* [Apache & PHP5 & MySQL](http://wiki.ubuntu.org.cn/Apache)
+* [PhpMyAdmin](www.phpmyadmin.net)
+* [Passenger](https://www.phusionpassenger.com/)
 
 
-Ruby on Rails
-* rvm & ruby & gem & bundler & rails [http://ruby-china.org/wiki/install_ruby_guide]
+### [Ruby on Rails](http://ruby-china.org/wiki/install_ruby_guide)
+* rvm & ruby & gem & bundler & rails 
 
 #### Sublime Text and Plugins
 * Package Control
