@@ -4,7 +4,7 @@
   <title><![CDATA[Magic Blog]]></title>
   <link href="http://magicHu.github.com/atom.xml" rel="self"/>
   <link href="http://magicHu.github.com/"/>
-  <updated>2013-01-30T00:19:10+08:00</updated>
+  <updated>2013-01-30T00:23:51+08:00</updated>
   <id>http://magicHu.github.com/</id>
   <author>
     <name><![CDATA[Magic]]></name>
@@ -61,15 +61,23 @@
     <link href="http://magicHu.github.com/blog/2013/01/26/ubuntukai-fa-huan-jing/"/>
     <updated>2013-01-26T23:59:00+08:00</updated>
     <id>http://magicHu.github.com/blog/2013/01/26/ubuntukai-fa-huan-jing</id>
-    <content type="html"><![CDATA[<p>Tools
-* Chrome
-* Sublime Text 2
-* Apache &amp; PHP5 &amp; MySQL [http://wiki.ubuntu.org.cn/Apache]
-* PhpMyAdmin [www.phpmyadmin.net]
-* Passenger [https://www.phusionpassenger.com/]</p>
+    <content type="html"><![CDATA[<h3>Tools</h3>
 
-<p>Ruby on Rails
-* rvm &amp; ruby &amp; gem &amp; bundler &amp; rails [http://ruby-china.org/wiki/install_ruby_guide]</p>
+<ul>
+<li>Chrome</li>
+<li><a href="http://www.sublimetext.com/">Sublime Text 2</a></li>
+<li><a href="http://wiki.ubuntu.org.cn/Apache">Apache &amp; PHP5 &amp; MySQL</a></li>
+<li><a href="www.phpmyadmin.net">PhpMyAdmin</a></li>
+<li><a href="https://www.phusionpassenger.com/">Passenger</a></li>
+</ul>
+
+
+<h3><a href="http://ruby-china.org/wiki/install_ruby_guide">Ruby on Rails</a></h3>
+
+<ul>
+<li>rvm &amp; ruby &amp; gem &amp; bundler &amp; rails</li>
+</ul>
+
 
 <h4>Sublime Text and Plugins</h4>
 
