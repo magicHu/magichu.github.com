@@ -17,3 +17,8 @@ Tools
 Ruby on Rails
 * rvm & ruby & gem & bundler & rails [http://ruby-china.org/wiki/install_ruby_guide]
 
+#### Sublime Text and Plugins
+* Package Control
+* Zen Coding
+* Alignment
+* Markdown Preview
