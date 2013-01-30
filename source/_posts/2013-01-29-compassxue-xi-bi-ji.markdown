@@ -3,7 +3,7 @@ layout: post
 title: "Compass学习笔记"
 date: 2013-01-29 23:49
 comments: true
-categories: 
+categories: ["CSS", "Compass"]
 ---
 
 ### [Compass CSS3](http://compass-style.org/reference/compass/css3/)
@@ -16,7 +16,7 @@ categories:
 
 ##### Mixins
 
-    * border-radius($radius, $vertical-radius)
+	* border-radius($radius, $vertical-radius)
 	* border-corner-radius($vert, $horz, $radius)
 	* border-top-left-radius($radius)
 	* border-top-right-radius($radius)

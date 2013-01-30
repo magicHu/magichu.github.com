@@ -3,7 +3,7 @@ layout: post
 title: "ubuntu开发环境"
 date: 2013-01-26 23:59
 comments: true
-categories: 
+categories: [Tool]
 ---
 
 ### Tools
