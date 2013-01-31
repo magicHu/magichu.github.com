@@ -57,6 +57,9 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 #   3rd Party Settings    #
 # ----------------------- #
 
+# Weibo
+weibo_user: huronghai
+
 # Github repositories
 github_user: magicHu
 github_repo_count: 0
@@ -93,7 +96,7 @@ disqus_short_name: magic2008
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-38117762-1
 
 # Facebook Like
 facebook_like: false

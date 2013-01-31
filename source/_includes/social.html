@@ -1,4 +1,10 @@
 <ul id="social-links" style="text-align:center">
+  {% if site.weibo_user %}
+  <!-- Weibo -->
+  <li>
+  <a href="http://weibo.com/{{ site.weibo_user }}" class="sina-weibo" title="Sina Weibo"></a>
+  </li>
+  {% endif %}
   {% if site.github_user %}
   <!-- GitHub -->
   <li>
