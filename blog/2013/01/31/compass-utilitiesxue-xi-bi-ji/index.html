@@ -3,11 +3,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Compass学习笔记 - Magic Blog</title>
+	<title>Compass General Utilities学习笔记 - Magic Blog</title>
     <meta name="author" content="Magic">
     
-	<meta name="description" content="Compass CSS3 Border Radius Configurable Variables * $default-border-radius 5px Mixins * border-radius($radius, $vertical-radius)
-* border-corner- &hellip;">
+	<meta name="description" content="Hacks Configurable Variables $default-has-layout-approach zoom # default has layout property, another is &#8216;block&#8217;
+Mixins has-layout($ &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -83,47 +83,93 @@
 <!-- begin toload --> 
     <div id="content" class="inner">
         <article class="post">
-	<h2 class="title">Compass学习笔记</h2>
-	<div class="entry-content"><h3><a href="http://compass-style.org/reference/compass/css3/">Compass CSS3</a></h3>
+	<h2 class="title">Compass General Utilities学习笔记</h2>
+	<div class="entry-content"><h3>Hacks</h3>
 
-<h4><a href="http://compass-style.org/reference/compass/css3/border_radius/">Border Radius</a></h4>
+<ul>
+<li><p>Configurable Variables
+  $default-has-layout-approach zoom   # default has layout property, another is &#8216;block&#8217;</p></li>
+<li><p>Mixins</p>
 
-<h5>Configurable Variables</h5>
+<ul>
+<li><p>has-layout($approach)     # &#8220;hasLayout&#8221; property in internet explorer
+  @if $legacy-support-for-ie {</p>
 
-<pre><code>* $default-border-radius 5px
+<pre><code>  @if $approach == zoom {
+    @include has-layout-zoom;
+  } @else if $approach == block {
+    @include has-layout-block;
+  } @else {
+    @warn "Unknown has-layout approach: #{$approach}";
+    @include has-layout-zoom;
+  }
+}
 </code></pre>
 
-<h5>Mixins</h5>
+  @mixin has-layout-zoom {
 
-<pre><code>* border-radius($radius, $vertical-radius)
-* border-corner-radius($vert, $horz, $radius)
-* border-top-left-radius($radius)
-* border-top-right-radius($radius)
-* border-bottom-left-radius($radius)
-* and so on...
+<pre><code>@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  *zoom: 1;
+}
 </code></pre>
 
-<h4><a href="http://compass-style.org/reference/compass/css3/text-shadow/">Text Shadow</a></h4>
+<p>  }</p>
 
-<h5>Configurable Variables</h5>
+<p>  @mixin has-layout-block {</p>
 
-<pre><code>* $default-text-shadow-color #aaaaaa
-* $default-text-shadow-h-offset 0px
-* $default-text-shadow-v-offset 0px
-* $default-text-shadow-blur 1px
-* $default-text-shadow-spread false
+<pre><code>@if $legacy-support-for-ie {
+  // This makes ie6 get layout
+  display: inline-block;
+  // and this puts it back to block
+  &amp; { display: block; }
+}
 </code></pre>
 
-<h5>Mixins</h5>
+<p>  }</p>
 
-<pre><code>* text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-* single-text-shadow($hoff, $voff, $blur, $spread, $color)
+<p>  <a href="http://adamghost.com/2009/03/ie-has-layout-and-bugs-zh/">what is has-layout in IE</a>
+  sample: @include has-layout;</p>
+
+<pre><code>          =&gt;
 </code></pre>
+
+  {
+
+<pre><code>  *zoom: 1;
+</code></pre>
+
+<p>  }</p></li>
+<li><p>bang-hack($property, $value, $ie6-value)
+  @if $legacy-support-for-ie6 {</p>
+
+<pre><code>  #{$property}: #{$value} !important;
+  #{$property}: #{$ie6-value};
+</code></pre>
+
+<p>  }</p>
+
+<p>  &#8220;bang-hack&#8221; just for resolve <a href="http://www.iwms.net/n2282c40.aspx">IE6 min-width/min-height problem</a>
+  sample: @include bang-hack(width, auto, 100px);</p>
+
+<pre><code>           =&gt; 
+</code></pre>
+
+  {
+
+<pre><code>  width: auto !important;
+  width: 100px;
+</code></pre>
+
+<p>  }</p></li>
+</ul>
+</li>
+</ul>
+
 </div>
 
 <div class="meta">
 	
-		<span class="comments"><a href="/blog/2013/01/29/compassxue-xi-bi-ji/#disqus_thread">Comments</a></span>
+		<span class="comments"><a href="/blog/2013/01/31/compass-utilitiesxue-xi-bi-ji/#disqus_thread">Comments</a></span>
 	
 </div>
 </article>
@@ -174,8 +220,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://magicHu.github.com/blog/2013/01/29/compassxue-xi-bi-ji/';
-        var disqus_url = 'http://magicHu.github.com/blog/2013/01/29/compassxue-xi-bi-ji/';
+        var disqus_identifier = 'http://magicHu.github.com/blog/2013/01/31/compass-utilitiesxue-xi-bi-ji/';
+        var disqus_url = 'http://magicHu.github.com/blog/2013/01/31/compass-utilitiesxue-xi-bi-ji/';
         var disqus_script = 'embed.js';
       
     (function () {

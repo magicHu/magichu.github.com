@@ -3,11 +3,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Compass学习笔记 - Magic Blog</title>
+	<title>Compass Helpers学习笔记 - Magic Blog</title>
     <meta name="author" content="Magic">
     
-	<meta name="description" content="Compass CSS3 Border Radius Configurable Variables * $default-border-radius 5px Mixins * border-radius($radius, $vertical-radius)
-* border-corner- &hellip;">
+	<meta name="description" content="opposite-position($position) opposite-position(left) =&gt; right
+opposite-position(top) =&gt; bottom
+opposite-position(center) =&gt; center
+opposite- &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -83,47 +85,20 @@
 <!-- begin toload --> 
     <div id="content" class="inner">
         <article class="post">
-	<h2 class="title">Compass学习笔记</h2>
-	<div class="entry-content"><h3><a href="http://compass-style.org/reference/compass/css3/">Compass CSS3</a></h3>
+	<h2 class="title">Compass Helpers学习笔记</h2>
+	<div class="entry-content"><h4>opposite-position($position)</h4>
 
-<h4><a href="http://compass-style.org/reference/compass/css3/border_radius/">Border Radius</a></h4>
-
-<h5>Configurable Variables</h5>
-
-<pre><code>* $default-border-radius 5px
-</code></pre>
-
-<h5>Mixins</h5>
-
-<pre><code>* border-radius($radius, $vertical-radius)
-* border-corner-radius($vert, $horz, $radius)
-* border-top-left-radius($radius)
-* border-top-right-radius($radius)
-* border-bottom-left-radius($radius)
-* and so on...
-</code></pre>
-
-<h4><a href="http://compass-style.org/reference/compass/css3/text-shadow/">Text Shadow</a></h4>
-
-<h5>Configurable Variables</h5>
-
-<pre><code>* $default-text-shadow-color #aaaaaa
-* $default-text-shadow-h-offset 0px
-* $default-text-shadow-v-offset 0px
-* $default-text-shadow-blur 1px
-* $default-text-shadow-spread false
-</code></pre>
-
-<h5>Mixins</h5>
-
-<pre><code>* text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-* single-text-shadow($hoff, $voff, $blur, $spread, $color)
+<pre><code>opposite-position(left)         =&gt; right
+opposite-position(top)          =&gt; bottom
+opposite-position(center)       =&gt; center
+opposite-position(top left)     =&gt; bottom right
+opposite-position(center right) =&gt; center left
 </code></pre>
 </div>
 
 <div class="meta">
 	
-		<span class="comments"><a href="/blog/2013/01/29/compassxue-xi-bi-ji/#disqus_thread">Comments</a></span>
+		<span class="comments"><a href="/blog/2013/01/30/compass-helpersxue-xi-bi-ji/#disqus_thread">Comments</a></span>
 	
 </div>
 </article>
@@ -174,8 +149,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://magicHu.github.com/blog/2013/01/29/compassxue-xi-bi-ji/';
-        var disqus_url = 'http://magicHu.github.com/blog/2013/01/29/compassxue-xi-bi-ji/';
+        var disqus_identifier = 'http://magicHu.github.com/blog/2013/01/30/compass-helpersxue-xi-bi-ji/';
+        var disqus_url = 'http://magicHu.github.com/blog/2013/01/30/compass-helpersxue-xi-bi-ji/';
         var disqus_script = 'embed.js';
       
     (function () {

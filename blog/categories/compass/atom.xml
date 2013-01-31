@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Magic Blog]]></title>
-  <link href="http://magicHu.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Compass | Magic Blog]]></title>
+  <link href="http://magicHu.github.com/blog/categories/compass/atom.xml" rel="self"/>
   <link href="http://magicHu.github.com/"/>
   <updated>2013-01-31T23:47:37+08:00</updated>
   <id>http://magicHu.github.com/</id>
@@ -22,11 +22,11 @@
 
 <ul>
 <li><p>Configurable Variables
-  $default-has-layout-approach zoom   # default has layout property, another is &#8216;block&#8217;</p></li>
+  $default-has-layout-approach zoom   # default has layout property, another is 'block'</p></li>
 <li><p>Mixins</p>
 
 <ul>
-<li><p>has-layout($approach)     # &#8220;hasLayout&#8221; property in internet explorer
+<li><p>has-layout($approach)     # "hasLayout" property in internet explorer
   @if $legacy-support-for-ie {</p>
 
 <pre><code>  @if $approach == zoom {
@@ -82,7 +82,7 @@
 
 <p>  }</p>
 
-<p>  &#8220;bang-hack&#8221; just for resolve <a href="http://www.iwms.net/n2282c40.aspx">IE6 min-width/min-height problem</a>
+<p>  "bang-hack" just for resolve <a href="http://www.iwms.net/n2282c40.aspx">IE6 min-width/min-height problem</a>
   sample: @include bang-hack(width, auto, 100px);</p>
 
 <pre><code>           =&gt; 
@@ -158,41 +158,6 @@ opposite-position(center right) =&gt; center left
 <pre><code>* text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 * single-text-shadow($hoff, $voff, $blur, $spread, $color)
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ubuntu开发环境]]></title>
-    <link href="http://magicHu.github.com/blog/2013/01/26/ubuntukai-fa-huan-jing/"/>
-    <updated>2013-01-26T23:59:00+08:00</updated>
-    <id>http://magicHu.github.com/blog/2013/01/26/ubuntukai-fa-huan-jing</id>
-    <content type="html"><![CDATA[<h3>Tools</h3>
-
-<ul>
-<li>Chrome</li>
-<li><a href="http://www.sublimetext.com/">Sublime Text 2</a></li>
-<li><a href="http://wiki.ubuntu.org.cn/Apache">Apache &amp; PHP5 &amp; MySQL</a></li>
-<li><a href="www.phpmyadmin.net">PhpMyAdmin</a></li>
-<li><a href="https://www.phusionpassenger.com/">Passenger</a></li>
-</ul>
-
-
-<h3><a href="http://ruby-china.org/wiki/install_ruby_guide">Ruby on Rails</a></h3>
-
-<ul>
-<li>rvm &amp; ruby &amp; gem &amp; bundler &amp; rails</li>
-</ul>
-
-
-<h4>Sublime Text and Plugins</h4>
-
-<ul>
-<li>Package Control</li>
-<li>Zen Coding</li>
-<li>Alignment</li>
-<li>Markdown Preview</li>
-</ul>
-
 ]]></content>
   </entry>
   
