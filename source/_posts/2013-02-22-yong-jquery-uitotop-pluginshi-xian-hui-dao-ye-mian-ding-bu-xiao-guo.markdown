@@ -1,0 +1,80 @@
+---
+layout: post
+title: "用jQuery UIToTop Plugin实现回到页面顶部效果"
+date: 2013-02-22 22:38
+comments: true
+categories: [Web前端，jQuery, jQuery Plugin]
+---
+
+## 用jQuery UIToTop Plugin实现回到页面顶部效果
+
+现在网页很流行在页面的右下角有个快捷“回到顶部”的按钮；在网上搜索了下，找到了这个[UItoTop jQuery Plugin](http://mattvarone.com/web-design/uitotop-jquery-plugin/), Github上的链接是[UItoTop-jQuery-Plugin](https://github.com/sksmatt/UItoTop-jQuery-Plugin/)，效果还可以，符合我的需求，而且源码比较简单。因为我目前的项目使用Ruby on Rails(ruby 1.9.3, rails 3.2.8)实现，前端使用CoffeeScript + SCSS, 所以需要自己稍微改造下；下面是我的实现步骤：
+
+1. 把img目录下的文件**ui.totop.png**拷贝到项目的assets/images/目录下。
+2. 把css目录下的文件**ui.totop.css**拷贝到项目的assets/stylesheets/目录下，重命名为**ui.totop.css.scss**(scss后缀)。由于原文的background image是url(../img/ui.totop.png)，但在Rails项目里，无法定位到正确的图片位置，所以分别把#toTop和#toTopHover的background的image修改为image-url("ui.totop.png")。
+3. 把js目录下的**jquery.ui.totop.js**和**easing.js**拷贝到项目的assets/javascripts/目录下；easing.js是为了实现更好的“回到顶部”效果，具体效果请参考[easing](http://gsgd.co.uk/sandbox/jquery/easing/)。
+4. 在项目的assets/stylesheets/目录下增加**to_top.js.coffee**文件，内容为：
+	
+		jQuery ->
+  			$().UItoTop({ easingType: 'easeOutQuart' })
+
+启动项目，并访问页面，如果页面内容超过一屏幕，往下拉，过会儿右下角就会出现“回到顶部”按钮；具体效果见[我的博客首页](http://magichu.github.com/)，往下滚动页面即可出现。
+
+## 源码分析
+这个插件的源码比较简单，下面我们初略的分下一下；先看CSS源码：
+
+	#toTop {
+	  display:none;
+	  text-decoration:none;
+	  position:fixed;
+	  bottom:10px;
+	  right:10px;
+	  overflow:hidden;
+	  width:51px;
+	  height:51px;
+	  border:none;
+	  text-indent:100%;
+	  background: image-url("ui.totop.png") no-repeat left top;
+	}
+
+	#toTopHover {
+	  background: image-url("ui.totop.png") no-repeat left -51px;
+	  width:51px;
+	  height:51px;
+	  display:block;
+	  overflow:hidden;
+	  float:left;
+	  opacity: 0;
+	  -moz-opacity: 0;
+	  filter:alpha(opacity=0);
+	}
+
+	#toTop:active, #toTop:focus {
+	  outline:none;
+	}
+
+说明：#toTop是默认出现“回到顶部”按钮的样式，#toTopHover是鼠标放在“回到顶部”按钮上的效果；通过position:fixed绝对定位到浏览器右下角，position属性说明见[CSS position 属性}(http://www.w3school.com.cn/css/pr_class_position.asp)；背景图片使用了CSS Sprints技术，减少了图片的请求数；同时使用了image replace text技术，具体实现是通过text-indent把文字缩进，达到隐藏文字的效果，再通过background image显示图片。
+
+
+
+JS代码就不全贴，下面看看它的default options: 
+	var defaults = {
+		text: 'To Top',
+		min: 200,
+		inDelay:600,
+		outDelay:400,
+		containerID: 'toTop',
+		containerHoverID: 'toTopHover',
+		scrollSpeed: 1200,
+		easingType: 'linear'
+	}
+
+说明：text是按钮的text内容，因为已使用image replace text，所以界面无法看到，一般不用特别设置；min=200是表示如果垂直滚动条偏移超过200,就显示"回到顶部"按钮；inDelay是表示按钮fade in的速度，outDelay表示按钮fade out的速度，containerID表示默认的css class name，containerHoverID表示hover的css class name；scrollSpeed表示回到顶部时的速度，easingType表示回到顶部的效果。
+
+基本原理：通过监听页面滚动条的变化（scroll事件），如果垂直滚动条的偏移超过设置的min值，则显示“回到顶部”按钮，否则隐藏按钮；点击“回到顶部”按钮，隐藏自己并以easingType的效果回到顶部。另外，该插件兼容IE6,是通过js来实现的，如果maxHeight没有定义，表示为IE6,设置该按钮的position为absolute，并定位到右下角。
+
+#### 如果文中不对和不够好的地方；欢迎提建议和意见。
+
+
+#### 注意：本文为原创；转载请注明来源为http://magichu.github.com//blog/2013/02/22/yong-jquery-uitotop-pluginshi-xian-hui-dao-ye-mian-ding-bu-xiao-guo/，谢谢〜〜
+
