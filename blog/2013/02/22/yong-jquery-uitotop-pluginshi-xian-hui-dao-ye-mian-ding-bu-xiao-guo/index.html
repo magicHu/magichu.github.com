@@ -3,10 +3,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Magic Blog</title>
+	<title>用jQuery UIToTop Plugin实现回到页面顶部效果 - Magic Blog</title>
     <meta name="author" content="Magic">
     
-	<meta name="description" content="Published on: Feb 22nd, 2013 Tags: Web前端，jQuery, jQuery Plugin 用jQuery UIToTop Plugin实现回到页面顶部效果 现在网页很流行在页面的右下角有个快捷“回到顶部”的按钮；在网上搜索了下，找到了这个UItoTop &hellip;">
+	<meta name="description" content="用jQuery UIToTop Plugin实现回到页面顶部效果 现在网页很流行在页面的右下角有个快捷“回到顶部”的按钮；在网上搜索了下，找到了这个UItoTop jQuery Plugin, Github上的链接是UItoTop-jQuery-Plugin，效果还可以，符合我的需求， &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,40 +87,9 @@
 <div id="toload">
 <!-- begin toload --> 
     <div id="content" class="inner">
-        
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/02/22/yong-jquery-uitotop-pluginshi-xian-hui-dao-ye-mian-ding-bu-xiao-guo/">
-		
-			用jQuery UIToTop Plugin实现回到页面顶部效果</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-22T22:38:00+08:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-
-	<a class='category' href='/blog/categories/web前端-jquery/'>Web前端，jQuery</a>, <a class='category' href='/blog/categories/jquery-plugin/'>jQuery Plugin</a>
-
-
-</div>
-    </div>
-		<h2>用jQuery UIToTop Plugin实现回到页面顶部效果</h2>
+        <article class="post">
+	<h2 class="title">用jQuery UIToTop Plugin实现回到页面顶部效果</h2>
+	<div class="entry-content"><h2>用jQuery UIToTop Plugin实现回到页面顶部效果</h2>
 
 <p>现在网页很流行在页面的右下角有个快捷“回到顶部”的按钮；在网上搜索了下，找到了这个<a href="http://mattvarone.com/web-design/uitotop-jquery-plugin/">UItoTop jQuery Plugin</a>, Github上的链接是<a href="https://github.com/sksmatt/UItoTop-jQuery-Plugin/">UItoTop-jQuery-Plugin</a>，效果还可以，符合我的需求，而且源码比较简单。因为我目前的项目使用Ruby on Rails(ruby 1.9.3, rails 3.2.8)实现，前端使用CoffeeScript + SCSS, 所以需要自己稍微改造下；下面是我的实现步骤：</p>
 
@@ -196,346 +165,34 @@
 <h4>如果文中不对和不够好的地方；欢迎提建议和意见。</h4>
 
 <h4>注意：本文为原创；转载请注明来源为http://magichu.github.com//blog/2013/02/22/yong-jquery-uitotop-pluginshi-xian-hui-dao-ye-mian-ding-bu-xiao-guo/，谢谢〜〜</h4>
-
-		
-		
-	</div>
+</div>
 
 <div class="meta">
 	
-		<span class="comments"><a href="/blog/2013/02/22/yong-jquery-uitotop-pluginshi-xian-hui-dao-ye-mian-ding-bu-xiao-guo//index.html#disqus_thread">Comments</a></span>
+		<span class="comments"><a href="/blog/2013/02/22/yong-jquery-uitotop-pluginshi-xian-hui-dao-ye-mian-ding-bu-xiao-guo/#disqus_thread">Comments</a></span>
 	
 </div>
 </article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/01/31/compass-utilitiesxue-xi-bi-ji/">
-		
-			Compass General Utilities学习笔记</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-31T23:19:00+08:00" pubdate data-updated="true">Jan 31<span>st</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-
-	<a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/compass/'>Compass</a>, <a class='category' href='/blog/categories/compass-utilities/'>Compass Utilities</a>, <a class='category' href='/blog/categories/web/'>Web</a>
-
-
-</div>
-    </div>
-		<h3>Hacks</h3>
-
-<ul>
-<li><p>Configurable Variables
-  $default-has-layout-approach zoom   # default has layout property, another is &#8216;block&#8217;</p></li>
-<li><p>Mixins</p>
-
-<ul>
-<li><p>has-layout($approach)     # &#8220;hasLayout&#8221; property in internet explorer
-  @if $legacy-support-for-ie {</p>
-
-<pre><code>  @if $approach == zoom {
-    @include has-layout-zoom;
-  } @else if $approach == block {
-    @include has-layout-block;
-  } @else {
-    @warn "Unknown has-layout approach: #{$approach}";
-    @include has-layout-zoom;
-  }
-}
-</code></pre>
-
-  @mixin has-layout-zoom {
-
-<pre><code>@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-  *zoom: 1;
-}
-</code></pre>
-
-<p>  }</p>
-
-<p>  @mixin has-layout-block {</p>
-
-<pre><code>@if $legacy-support-for-ie {
-  // This makes ie6 get layout
-  display: inline-block;
-  // and this puts it back to block
-  &amp; { display: block; }
-}
-</code></pre>
-
-<p>  }</p>
-
-<p>  <a href="http://adamghost.com/2009/03/ie-has-layout-and-bugs-zh/">what is has-layout in IE</a>
-  sample: @include has-layout;</p>
-
-<pre><code>          =&gt;
-</code></pre>
-
-  {
-
-<pre><code>  *zoom: 1;
-</code></pre>
-
-<p>  }</p></li>
-<li><p>bang-hack($property, $value, $ie6-value)
-  @if $legacy-support-for-ie6 {</p>
-
-<pre><code>  #{$property}: #{$value} !important;
-  #{$property}: #{$ie6-value};
-</code></pre>
-
-<p>  }</p>
-
-<p>  &#8220;bang-hack&#8221; just for resolve <a href="http://www.iwms.net/n2282c40.aspx">IE6 min-width/min-height problem</a>
-  sample: @include bang-hack(width, auto, 100px);</p>
-
-<pre><code>           =&gt; 
-</code></pre>
-
-  {
-
-<pre><code>  width: auto !important;
-  width: 100px;
-</code></pre>
-
-<p>  }</p></li>
-</ul>
-</li>
-</ul>
-
-
-		
-		
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
-
-<div class="meta">
-	
-		<span class="comments"><a href="/blog/2013/01/31/compass-utilitiesxue-xi-bi-ji//index.html#disqus_thread">Comments</a></span>
-	
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/01/30/compass-helpersxue-xi-bi-ji/">
-		
-			Compass Helpers学习笔记</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
 
 
 
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-30T16:57:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-
-	<a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/compass/'>Compass</a>
-
-
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-    </div>
-		<h4>opposite-position($position)</h4>
-
-<pre><code>opposite-position(left)         =&gt; right
-opposite-position(top)          =&gt; bottom
-opposite-position(center)       =&gt; center
-opposite-position(top left)     =&gt; bottom right
-opposite-position(center right) =&gt; center left
-</code></pre>
-
-		
-		
-	</div>
-
-<div class="meta">
-	
-		<span class="comments"><a href="/blog/2013/01/30/compass-helpersxue-xi-bi-ji//index.html#disqus_thread">Comments</a></span>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/01/29/compassxue-xi-bi-ji/">
-		
-			Compass学习笔记</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-29T23:49:00+08:00" pubdate data-updated="true">Jan 29<span>th</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-
-	<a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/compass/'>Compass</a>
-
-
-</div>
-    </div>
-		<h3><a href="http://compass-style.org/reference/compass/css3/">Compass CSS3</a></h3>
-
-<h4><a href="http://compass-style.org/reference/compass/css3/border_radius/">Border Radius</a></h4>
-
-<h5>Configurable Variables</h5>
-
-<pre><code>* $default-border-radius 5px
-</code></pre>
-
-<h5>Mixins</h5>
-
-<pre><code>* border-radius($radius, $vertical-radius)
-* border-corner-radius($vert, $horz, $radius)
-* border-top-left-radius($radius)
-* border-top-right-radius($radius)
-* border-bottom-left-radius($radius)
-* and so on...
-</code></pre>
-
-<h4><a href="http://compass-style.org/reference/compass/css3/text-shadow/">Text Shadow</a></h4>
-
-<h5>Configurable Variables</h5>
-
-<pre><code>* $default-text-shadow-color #aaaaaa
-* $default-text-shadow-h-offset 0px
-* $default-text-shadow-v-offset 0px
-* $default-text-shadow-blur 1px
-* $default-text-shadow-spread false
-</code></pre>
-
-<h5>Mixins</h5>
-
-<pre><code>* text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-* single-text-shadow($hoff, $voff, $blur, $spread, $color)
-</code></pre>
-
-		
-		
-	</div>
-
-<div class="meta">
-	
-		<span class="comments"><a href="/blog/2013/01/29/compassxue-xi-bi-ji//index.html#disqus_thread">Comments</a></span>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/01/26/ubuntukai-fa-huan-jing/">
-		
-			Ubuntu开发环境</a>
-	</h2>
-    <div class="entry-content">
-    <div class="meta">
-      <div class="date">Published on: 
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-26T23:59:00+08:00" pubdate data-updated="true">Jan 26<span>th</span>, 2013</time></div>
-      <div class="tags">Tags: 
-
-
-	<a class='category' href='/blog/categories/tool/'>Tool</a>
-
-
-</div>
-    </div>
-		<h3>Tools</h3>
-
-<ul>
-<li>Chrome</li>
-<li><a href="http://www.sublimetext.com/">Sublime Text 2</a></li>
-<li><a href="http://wiki.ubuntu.org.cn/Apache">Apache &amp; PHP5 &amp; MySQL</a></li>
-<li><a href="www.phpmyadmin.net">PhpMyAdmin</a></li>
-<li><a href="https://www.phusionpassenger.com/">Passenger</a></li>
-</ul>
-
-
-<h3><a href="http://ruby-china.org/wiki/install_ruby_guide">Ruby on Rails</a></h3>
-
-<ul>
-<li>rvm &amp; ruby &amp; gem &amp; bundler &amp; rails</li>
-</ul>
-
-
-<h4>Sublime Text and Plugins</h4>
-
-<ul>
-<li>Package Control</li>
-<li>Zen Coding</li>
-<li>Alignment</li>
-<li>Markdown Preview</li>
-</ul>
-
-
-		
-		
-	</div>
-
-<div class="meta">
-	
-		<span class="comments"><a href="/blog/2013/01/26/ubuntukai-fa-huan-jing//index.html#disqus_thread">Comments</a></span>
-	
-</div>
-</article>
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav>
+</section>
 
     </div>
     <footer id="footer">
@@ -562,7 +219,10 @@ opposite-position(center right) =&gt; center left
       var disqus_shortname = 'magic2008';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://magicHu.github.com/blog/2013/02/22/yong-jquery-uitotop-pluginshi-xian-hui-dao-ye-mian-ding-bu-xiao-guo/';
+        var disqus_url = 'http://magicHu.github.com/blog/2013/02/22/yong-jquery-uitotop-pluginshi-xian-hui-dao-ye-mian-ding-bu-xiao-guo/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
